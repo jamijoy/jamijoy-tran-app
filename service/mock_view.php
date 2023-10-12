@@ -4,14 +4,14 @@ $mockStatus = isset($_SERVER['HTTP_X_MOCK_STATUS']) ? $_SERVER['HTTP_X_MOCK_STAT
 header('Content-Type: application/json');
 
 $responseData = [
-    "message" => "Mock response for transaction api",
+    "message" => "Mock response for transaction api - GENERAL MESSAGE",
 ];
 
 if ($mockStatus === "200") {
 
     http_response_code(200);
     $responseData["status"] = "accepted";
-    $responseData["transaction_id"] = $_SERVER['HTTP_X_TRANSACTION_ID'];
+    $responseData["transaction_id"] = isset($_SERVER['HTTP_X_TRANSACTION_ID']) ? $_SERVER['HTTP_X_TRANSACTION_ID'] : "N/A";
 } elseif ($mockStatus === "400") {
 
     http_response_code(400);

@@ -14,8 +14,7 @@ $statement = $entity->getConnection()->prepare($sql);
 //$statement->bindValue(':id', $this->id());
 $statement->execute();
 $num = $statement->rowCount();
-if ($num == 1) {
-    $row = $statement->fetch(PDO::FETCH_ASSOC);
-    $status = $row['status'];
-}
-echo 'status for payment > '.$status . ' at ' . $entity->getDatetime();
+
+echo 'No of transaction alive > ';
+print_r($num);
+echo ' at ' . $entity->getDatetime();
