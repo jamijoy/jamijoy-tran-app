@@ -30,7 +30,8 @@ if (!isset($_GET['user_id']) or !isset($_GET['amount'])){
 
         $headers = [
             "X-Mock-Status: 200", // instial response
-            "X-Transaction-ID: ".$last_id
+            "X-Transaction-ID: ".$last_id,
+            "X-Transaction-Status: pending"
         ];
     }else{
 

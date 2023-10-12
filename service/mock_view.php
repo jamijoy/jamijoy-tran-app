@@ -12,6 +12,7 @@ if ($mockStatus === "200") {
     http_response_code(200);
     $responseData["status"] = "accepted";
     $responseData["transaction_id"] = isset($_SERVER['HTTP_X_TRANSACTION_ID']) ? $_SERVER['HTTP_X_TRANSACTION_ID'] : "N/A";
+    $responseData["transaction_status"] = isset($_SERVER['HTTP_X_TRANSACTION_STATUS']) ? $_SERVER['HTTP_X_TRANSACTION_STATUS'] : "N/A";
 } elseif ($mockStatus === "400") {
 
     http_response_code(400);

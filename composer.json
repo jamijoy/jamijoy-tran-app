@@ -1,6 +1,7 @@
 {
   "require": {
     "ext-pdo": "*",
-    "ext-curl": "*"
+    "ext-curl": "*",
+    "ext-json": "*"
   }
 }
